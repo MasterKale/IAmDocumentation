@@ -4,6 +4,7 @@ Setting up ScreenConnect with SSL and an NGINX reverse-proxy
 [TOC]
 
 ## Provision a server
+
 Any server is fine so long as it's x86-based (maybe one day SC will update their instance of Mono for better ARM support...). For the purposes of this guide, let's assume you're using a VPS with the following specs:
 
 - Ubuntu 14.04 LTS
@@ -13,6 +14,7 @@ Any server is fine so long as it's x86-based (maybe one day SC will update their
 - Access to ports 80, 443, and 8041
 
 ## Install ScreenConnect
+
 I like to install ScreenConnect into `/opt/`. To simplify things, here's a dual-purpose install/upgrade script I grabbed off of the [ScreenConnect website](http://help.screenconnect.com/Installing_the_server_software_on_a_Linux_machine):
 
 	#!/bin/sh
@@ -85,7 +87,7 @@ You *might* run into an issue later on if you don't check your combined certific
 	-----END CERTIFICATE----------BEGIN CERTIFICATE-----
 	...snip...
 
-`END CERTIFICATE` and `BEING CERTIFICATE` need to be on separate lines! Place a line break after the fifth dash proceeding `END CERTIFICATE`:
+`END CERTIFICATE` and `BEGIN CERTIFICATE` need to be on separate lines! Place a line break after the fifth dash proceeding `END CERTIFICATE`:
 
 	...snip...
 	-----END CERTIFICATE-----
@@ -107,7 +109,7 @@ To further secure your server, you'll want to generate a unique group for NGINX.
 	# Generate a new group
 	openssl dhparam -out dhparams.pem 2048
 
-Once `openssl` finishes, you're `/tls/` folder should look like this:
+Once `openssl` finishes, your `/tls/` folder should look like this:
 
 	matt@mattserver:/etc/nginx/tls$ ls
 	dhparams.pem           domainname.crt.orig  startssl.class1.intermediate.pem
