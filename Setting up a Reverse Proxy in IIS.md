@@ -34,10 +34,23 @@ Relaunch the IIS management console and look for the '**URL Rewrite**' module on
 	- e.g. 'localhost:8000'
 
 ## Troubleshooting
+
+*Please note that Windows 10's various upgrades appear to reset IIS settings! This issue may be unique to Fast Ring releases, but either way I've experienced this twice so I included the following troubleshooting items.*
+
 ### 'URL Rewrite' icon is missing from a site or folder
 
-Try repairing both modules from Windows' Programs and Features window
+Try repairing both modules from Windows' Programs and Features window:
 
 - Start Menu > 'Programs and Features'
 - Repair 'IIS URL Rewrite Module 2'
 - Repair 'Microsoft Application Request Routing 3.0'
+
+### Reverse-proxy routes still yield 404 despite repairing URL Rewriting Module 2 and AAR 3.0 
+
+Ensure that proxy functionality is turned on within AAR:
+
+- Click on the IIS server (the top-most item) in the left-hand column
+- Open **Application Request Routing Cache**
+- On the right-hand side, select **Server Proxy Settings...**
+- Make sure the **Enable proxy** box is checked, then click **Back to AAR Cache**
+    - If prompted to save, click **Yes**
