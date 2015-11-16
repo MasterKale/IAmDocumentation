@@ -7,3 +7,11 @@ And I freely admit that I might make a mistake here or there. I will gladly acce
 
 ### A Forewarning
 Everything's written in Markdown because I wanted an excuse to start using it. Everything should look fine on GitHub, but I'm using Markdown Preview in Sublime Text to preview output so some stuff may not be supported here. I haven't yet decided if I'm going to scrub that stuff from my work as I discover it...
+
+Ideas for future articles:
+=========================
+
+* Using Putty private keys in OpenSSH in Linux
+    * Putty-Gen > Save OpenSSH Key, chmod 0600 key file, drop into ~/.ssh
+* Setting up multiple private keys for different sites in OpenSSH
+    * See https://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client/2419609#2419609
