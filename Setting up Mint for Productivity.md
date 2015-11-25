@@ -9,6 +9,7 @@ This is a record of everything I did to configure a fresh copy of Mint 17.2 to a
 
 Each section is pretty much self-contained. None of them really rely on any of the others. In a sense this guide could also be seen as a compendium of mini-tutorials for installing and configuring various programs and features within Ubuntu-based distros. There are some Mint-specific references throughout, though, so don't be alarmed if you can't find something in a non-Mint distro.
 
+
 ## Update Mint completely
 
 This is a pretty typical first step:
@@ -22,11 +23,13 @@ You can also tack on a `-y` to the end of `upgrade` if you just want it to run. 
 
 You can also bring this up via the Shield icon that appears next to the clock.
 
+
 ## Turn on the firewall
 
 I don't know why the firewall is off by default but it's easy to turn on:
 
 	sudo ufw enable
+
 
 ## Install Solaar
 
@@ -73,6 +76,25 @@ Mozc needs to be enabled from within IBus Preferences:
 * Click **Add** to add Mozc to the list of input methods
 
 By default you can switch between English and Mozc with **Ctrl+Space**.
+
+If you're coming from the Microsoft IME, you might be more comfortable using **Alt+`** (grave) to change languages. It's possible to use this same shortcut in Mint, but by default Mint has this bound to the **Cycle through open windows of the same application* shortcut. To reassign this shortcut, you must first disable it:
+
+* Click **Menu**, then search for '**shortcut**'
+* Click **Keyboard**, then click the **Shortcuts** tab
+* Under **General**, click **Cycle through open windows of the same application**
+* Beneath it, select the keyboard binding that says `` Alt+` ``, then press **Backspace** to clear it
+
+Next, change the IBus language switch shortcut:
+
+* Re-open IBus Preferences
+* Click the **...** button next to the **Next input method** textbox
+* Click the **...** button next to the **Key code** textbox
+* Click the **disabled** text to start key recognition mode, then press the `` ` `` (grave) key
+* Under **Modifiers**, click **Alt**, then click **Apply**
+
+You should now see `<Alt>grave` in the **Next input method** textbox and immediately be able to use it to switch between input methods.
+
+By the way, I tried using `<Super>space` to switch IMEs (this is how Windows 8/10 handles it) but I had to hold down the key combination to get it to fire. The delay is probably caused by this key combination being assigned somewhere else in the OS but I wasn't able to find out where (yes, I searched all the Keyboard shortcuts!). **Alt+`** is just as familiar so I stuck with it instead.
 
 
 ## Install Sublime Text 3
