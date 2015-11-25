@@ -54,12 +54,16 @@ I went the GUI route to install this in Mint:
 * Click **Language Settings**, then select the **Input Method** section
 * Click the **Add support for IBus** button
 
+You can also install this via the command line:
+
+	sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+
 
 ## Install Mozc
 
 You *should* be able to install Mozc with this command:
 
-	sudo apt-get install ibus-mozc && sudo apt-get install mozc-server && sudo apt-get install mozc-data && sudo apt-get install mozc-utils-gui
+	sudo apt-get install ibus-mozc mozc-server mozc-data mozc-utils-gui
 
 Accept any prerequisites it might need.
 
@@ -71,6 +75,7 @@ Mozc needs to be enabled from within IBus Preferences:
 
 * Click **Menu**, then search for "ibus"
 * Click **Keyboard Input Methods**, then select the **Input Method** tab
+	* If you're prompted to start the **IBus Daemon**, go ahead and click **Yes**
 * Check the **Customize active input methods** box if it isn't already
 * From the dropdown, click **Show all input methods**, select **Japanese**, then click **Mozc**
 * Click **Add** to add Mozc to the list of input methods
@@ -185,7 +190,7 @@ They'll both get installed with default settings. You can then access PostgreSQL
 
 If you happen to use Slack, ScudCloud is a highly-recommended (but unofficial) client:
 
-	sudo apt-add-respository -y ppa:rael-gc/scudcloud
+	sudo apt-add-repository -y ppa:rael-gc/scudcloud
 	sudo apt-get update
 	sudo apt-get install scudcloud
 
@@ -200,7 +205,7 @@ I have a wireless Brother printer that won't work if you just try to install the
 
 Download the bash script, extract it, and then run it:
 
-	bash linux-brprinter-installer-2.0.0-1
+	sudo bash linux-brprinter-installer-2.0.0-1
 
 Choose `yes` when prompted whether or not you want to specify a DeviceURI. Then you can connect to the printer by IP, or by its automatically created connection URI if you're doing this after trying to install it via Printers.
 
@@ -211,17 +216,34 @@ Almost every popular cloud storage solution has neglected Linux. In addition, th
 
 Copy, on the other hand, is ticking all the right boxes: it has a Linux client, you get 15GB of free storage, and they offer a nice intermediate paid tier with 250GB of storage for $5/mo. You can also use [referral bonuses](https://copy.com?r=2wqKA3) to get up to an additional 25GB of free storage!
 
-Anyway, you have to manually "install" Copy. I say "manually" because it involves decompressing some files and running one of the executables.
+To start, add a third-party repository that exists to make Copy available via the command line:
+
+	sudo add-apt-repository ppa:paolorotolo/copy
+
+Then, install Copy:
+
+	sudo apt-get update
+	sudo apt-get install copy
+
+You'll find Copy in `/opt/copy-client/`.
+
+You can also manually install Copy if you don't trust the PPA. I say "manually" because it involves decompressing some files and running one of the executables.
 
 Start by downloading Copy:
 
 > https://copy.com/install/linux/Copy.tgz
 
-Then, decompress the files. I placed them in `~/.copy/copy_app/` to keep everything compartmentalized.
+Then, decompress the files somewhere. I placed them in `~/.copy/copy_app/` to keep everything compartmentalized.
 
-Check out the `README` file for a description of all three ways of running Copy. I opted for `CopyAgent`, which places an icon in the system tray and lets you easily monitor the status of Copy.
+Regardless of how you installed Copy, check out the `README` file for a description of all three methods of running Copy. I opted for `CopyAgent`, which places an icon in the system tray and lets you easily monitor the status of Copy.
 
-You'll also be prompted to place a Copy folder somewhere. I pointed it to `~/Copy/` and moved `Documents` inside there to try and make Copy as transparent as possible.
+You'll also be prompted to place a Copy folder somewhere. I pointed it to `~/Copy/` and moved `Documents` and `Desktop` inside there to try and make Copy as transparent as possible.
+
+And if you want to enable additional Copy-specific options in your File Manager's right-click menu, you can run the following to do so:
+
+	sudo /opt/copy-client/CopyAgent -installOverlay
+
+The overlays appear to be supported in Nautilus and Caja.
 
 
 ## Create soft-links to settings stored in ~/.config/
