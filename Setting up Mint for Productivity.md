@@ -9,6 +9,7 @@ This is a record of everything I did to configure a fresh copy of Mint 17.2 to a
 
 Each section is pretty much self-contained. None of them really rely on any of the others. In a sense this guide could also be seen as a compendium of mini-tutorials for installing and configuring various programs and features within Ubuntu-based distros. There are some Mint-specific references throughout, though, so don't be alarmed if you can't find something in a non-Mint distro.
 
+**Take heed!** I've opted for the XFCE version of Mint. If some of these commands fail, you might be using a non-XFCE environment. I'll try and make a note of when you might run into an issue because of this.
 
 ## Update Mint completely
 
@@ -153,6 +154,7 @@ Install Mercurial, and TortoiseHG to assist in writing commit logs:
 
 	sudo apt-get install mercurial && sudo apt-get install tortoisehg
 
+TortoiseHg comes with a useful GUI for managing commits. You can activate this from any Mercurial repo by running `thg` from the terminal while in a folder containing a `.hg` subfolder.
 
 ## Install gitg (for Git GUI)
 
@@ -160,6 +162,7 @@ Git is already installed, so we just need to install a graphical frontend to mak
 	
 	sudo apt-get install gitg
 
+From this point on you can activate gitg by navigating to a repo folder containing a `.git` subfolder and running `gitg` via the terminal.
 
 ## Install pip3
 
@@ -167,7 +170,7 @@ Pretty simple:
 
 	sudo apt-get install python3-pip
 
-BTW Python 2 isn't going anywhere any time soon, so for backwards-compatibility reasons it's a Bad Idea&trade; to try and point the `python` console command to Python3. Just deal with typing `python3` and `pip3` instead, at least until you get `virtualenv` installed. After that everything should be developed inside a virtual environment, within which `python` will point to `python3`.
+By the way Python 2 isn't going anywhere any time soon. For backwards-compatibility reasons it's a Bad Idea&trade; to try and point the `python` console command to Python3. Just deal with typing `python3` and `pip3` instead, at least until you get `virtualenv` installed. After that everything should be developed inside a virtual environment, within which `python` will point to `python3`.
 
 On that note, let's install a couple of global Python tools:
 
@@ -257,3 +260,18 @@ I discovered the joy of soft links so I went ahead and started moving program co
 This should create a softlink at `~/.config/sublime-text-3/Packages/User/` that points to `~/Copy/Settings/SublimeText3/`. In this example Sublime Text is none the wiser as to where its settings actually reside, and from that point on any change made to its settings will get synced up to cloud storage.
 
 The trickiest part is figuring out which files to back up. It appears that most programs are nice enough to drop their settings into `~/.config/`, so that's a good place to start looking.
+
+
+## Install Dropbox with Thunar integration
+
+Dropbox is still a useful program, even if their plans are a bit inflexible. You can install it with a simple `apt-get` command:
+
+	sudo apt-get install dropbox
+
+Afterwards, if you want Dropbox-specific options in Thunar's right-click menu, you'll need to install the integration plugin:
+
+	sudo apt-get install thunar-dropbox-plugin
+
+From that point on you can perform various Dropbox tasks (including getting shareable links) by right-clicking from within the Dropbox folder.
+
+Note that if you're using another file manager you'll want to track down its specific Dropbox integration plugin. I'm using Thunar because it came integrated with XFCE.
