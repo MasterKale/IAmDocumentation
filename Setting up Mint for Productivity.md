@@ -275,3 +275,13 @@ Afterwards, if you want Dropbox-specific options in Thunar's right-click menu, y
 From that point on you can perform various Dropbox tasks (including getting shareable links) by right-clicking from within the Dropbox folder.
 
 Note that if you're using another file manager you'll want to track down its specific Dropbox integration plugin. I'm using Thunar because it came integrated with XFCE.
+
+
+# Additional Resources
+
+* Currently tesing out the RAVEfinity theme and icon set:
+	* Theme: http://www.ravefinity.com/p/download-ambiance-radiance-flat-colors.html
+	* Icon Set: http://www.ravefinity.com/p/vivacious-colors-gtk-icon-theme.html
+	* Current Theme: Radiance-Flat (Blue-Spring-Pro)
+	* Current Icon Set: Vivacious-Light (Blue)
+	* Window Style: Radiance-Flat (Blue-Spring)
