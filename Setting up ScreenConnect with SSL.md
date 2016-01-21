@@ -218,6 +218,30 @@ Save the changes to `web.config`, then restart ScreenConnect:
 
 Once ScreenConnect comes back up, requests to `http://sub.domainname.com:8040` should be refused. `https://sub.domainname.com` should still work fine, though, since NGINX is reverse-proxying those requests to `http://localhost:8040`.
 
+## Optional: Tweak ScreenConnect to enable launching support sessions in Linux
+
+**If you only launch support sessions from Windows then you can safely ignore this step.**
+
+After switching to Linux as my daily OS I discovered that I couldn't launch support sessions to remote machines. When I tried to launch a session from the web console, I would get back a `.jnlp` executable (an IcedTea-7 launcher) that would start but quickly fail with this error message:
+
+>	Fatal: Initialization Error: Unknown Main-Class. Could not determine the main class for this application.
+
+The issue is that, by default, ScreenConnect's Linux clients attempt to download additional files from the server on port 8040. As configured earlier, though, this port is blocked at the firewall.
+
+Fortunately, the fix is very simple. First, open up ScreenConnect's `web.config` file:
+
+	sudo nano /opt/screenconnect/web.config
+
+Within the `<appSettings>` node, add the following XML:
+
+	<add key="WebServerAddressableUri" value="https://sub.domainname.com/"/>
+
+Save `web.config`, then restart SC:
+
+	sudo service screenconnect restart
+
+Back in the web control panel, join a session and run the new `.jnlp` file that will download. It should now find and download the files it was unable to access earlier, and your support session should begin.
+
 # Additional reading
 
 Here's some additional reading that I found useful while setting up my ScreenConnect and writing this guide:
