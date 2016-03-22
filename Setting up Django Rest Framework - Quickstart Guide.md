@@ -4,7 +4,7 @@
 
 This quickstart guide is intended to speed up the initialization of a new REST API using Django Rest Framework.
 
-Additional goals include the implementation of Token authorization for securing API calls, as well as a custom User class for easier user management.
+Additional goals include the implementation of Token authentication for securing API calls, as well as a custom User class for easier user management.
 
 ## Instructions
 
