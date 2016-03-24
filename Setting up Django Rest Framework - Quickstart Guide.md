@@ -100,7 +100,7 @@ The default Django User model is pretty useful for basic user management, but us
 The Django docs include [a detailed write-up](https://docs.djangoproject.com/en/1.9/topics/auth/customizing/#specifying-a-custom-user-model) on how to implement a custom User model. The simplest way to get started is to inherit a class from `AbstractBaseUser` and customize from there:
 
 ```python
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.db import models
 
 class Account(AbstractBaseUser):
@@ -129,6 +129,32 @@ class Account(AbstractBaseUser):
 
     def get_short_name(self):
         return self.first_name
+```
+
+You'll also need to define a custom `BaseUserManager` to handle the new `Account` model:
+
+```python
+class AccountManager(BaseUserManager):
+    def create_user(self, email, password=None):
+        if not email:
+            raise ValueError('User must provide an e-mail address')
+
+        account = self.model(
+            email=self.normalize_email(email)
+        )
+
+        account.set_password(password)
+        account.save()
+
+        return account
+
+    def create_superuser(self, email, password=None):
+        account = self.create_user(email, password)
+
+        account.is_admin = True
+        account.save()
+
+        return account
 ```
 
 Django will need to be updated to use this new User model. Open `settings.py` and define the `AUTH_USER_MODEL` variable with this new model:
