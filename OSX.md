@@ -46,3 +46,15 @@ Contexts gives me a Windows-esque window switcher when I switch between windows 
 MenuBar Stats provides an XFCE-esque system resource monitor that sits in the menu bar. I like to keep track of CPU and RAM consumption, and this works perfectly for that:
 
 ![MenuBar Stats in action](images/menubarstats.png)
+
+### Soundflower + Soundflowerbed
+
+OSX disables volume control when you specify an HDMI monitor to handle audio output. The only way I could get back volume control while still playing sound through my monitor was to use the largely-abandoneware [Soundflower](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2) and [SoundflowerBed](https://github.com/mLupine/SoundflowerBed/releases/tag/2.0.0-release).
+
+After installing them, select **Soundflower (2ch)** as the audio output device:
+
+![Select "Soundflower (2ch)" as the audio output device](images/soundflower-output.png)
+
+Then click on the SoundflowerBed icon in the menu bar and select **HDMI** as the output to use for **Soundflower (2ch)**:
+
+![Select "HDMI" as the audio output to use for Soundflower (2ch)](images/soundflower-soundflowerbed.png)
