@@ -4,8 +4,32 @@ Things I've discovered that fix some of OSX's rough edges
 
 ## Tips
 
-* Tapping `space` when a file is selected in Finder will open that file via **Quick Look**. This will open a popup with a preview of the contents of the file. See the **Quick Look Plugins** section below for additional plugins that can increase the number of files that are supported by this feature.
-* When opening files from within an application via the file dialogue, such as when selecting a file to upload from within Chrome, you can use Quick Look to see a larger version of a thumbnail before selecting a file.
+### Quick Look
+
+Tapping `space` when a file is selected in Finder will open that file via **Quick Look**. This will open a popup with a preview of the contents of the file. See the **Quick Look Plugins** section below for additional plugins that can increase the number of files that are supported by this feature.
+
+When opening files from within an application via the file dialogue, such as when selecting a file to upload from within Chrome, you can use Quick Look to see a larger version of a thumbnail before selecting a file.
+
+### Screenshots
+
+You can specify a new location for screenshots to be saved with the following command:
+
+```sh
+$ defaults write com.apple.screencapture location ~/Screenshots
+```
+
+`~/Screenshots` can be substituted out for another directory. From that point on, screenshots taken with **Cmd+Shift+3** or **Cmd+Shift+4** will be saved to that location.
+
+### Finder - Hidden Files
+
+You can toggle the visibility of hidden files (a.k.a. **dotfiles**) using **Cmd+Shift+.**. However, if you always want hidden files to be visible in Finder, you can specify that with `defaults`:
+
+```sh
+$ defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+Afterwards, hold the **Option** key, **right-click** the Finder icon, then click **Relaunch**. The next time you open a Finder window you should see hidden files.
+
 
 ## Additional Software
 
