@@ -71,14 +71,6 @@ MenuBar Stats provides an XFCE-esque system resource monitor that sits in the me
 
 ![MenuBar Stats in action](images/menubarstats.png)
 
-### Soundflower + Soundflowerbed
+### [Sound Control](https://staticz.com/soundcontrol/)
 
-OSX disables volume control when you specify an HDMI monitor to handle audio output. The only way I could get back volume control while still playing sound through my monitor was to use the largely-abandoneware [Soundflower](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2) and [SoundflowerBed](https://github.com/mLupine/SoundflowerBed/releases/tag/2.0.0-release).
-
-After installing them, select **Soundflower (2ch)** as the audio output device:
-
-![Select "Soundflower (2ch)" as the audio output device](images/soundflower-output.png)
-
-Then click on the SoundflowerBed icon in the menu bar and select **HDMI** as the output to use for **Soundflower (2ch)**:
-
-![Select "HDMI" as the audio output to use for Soundflower (2ch)](images/soundflower-soundflowerbed.png)
+OSX disables volume control when you specify an HDMI monitor to handle audio output. Fortunately the Sound Control application exists to address this issue. Keyboard volume controls work as expected, and it's painless to switch input and output audio devices in case you need to switch over to a headset. Per-application volume control is also supported after purchasing a license.
