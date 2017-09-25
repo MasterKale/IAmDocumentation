@@ -20,6 +20,12 @@ $ defaults write com.apple.screencapture location ~/Screenshots
 
 `~/Screenshots` can be substituted out for another directory. From that point on, screenshots taken with **Cmd+Shift+3** or **Cmd+Shift+4** will be saved to that location.
 
+Additionally, you can disable drop shadows on window screenshots (Cmd+Shift+4, Space) with the following command:
+
+```sh
+$ defaults write com.apple.screencapture disable-shadow -bool true
+```
+
 ### Finder - Hidden Files
 
 You can toggle the visibility of hidden files (a.k.a. **dotfiles**) using **Cmd+Shift+.**. However, if you always want hidden files to be visible in Finder, you can specify that with `defaults`:
