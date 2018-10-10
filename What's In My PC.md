@@ -1,4 +1,4 @@
-# What's In My PC (as of 05/2016)
+# What's In My PC (as of 10/2018)
 
 ## Custom Build
 
@@ -6,7 +6,7 @@
 * Intel Core i5-4590 Haswell Quad-Core 3.3GHz
 
 ### RAM
-* G.SKILL Ripjaws X Series 8GB (2 x 4GB) DDR3 2400 Model F3-2400C11D-8GXM
+* G.SKILL Ripjaws X Series 16GB (4 x 4GB) DDR3 2400 Model F3-2400C11D-8GXM
 
 ### GPU
 * ZOTAC ZT-90101-10P GeForce GTX 970 4GB 256-Bit DDR5 PCI Express 3.0 x16
@@ -32,16 +32,19 @@
 * Fractal Design Arc Midi R2
 
 ### Monitor
-* Asus VN247H-P 1920x1080 HDMI LCD Monitor
+* Samsung UE590 (4K, TN LCD, 60Hz, 28")
+* Dell U2515H (2K, IPS LCD, 60Hz, 25")
+* Asus VN247H-P (1080p, LCD, 60Hz, 24")
 
 ### Keyboard
-* CoolerMaster QuickFire Rapid TKL
-	* Cherry MX Browns
-	* ABS Doubleshot Keycaps (Grey + Orange)
+* NIZ PLUM 87 RGB (White)
+	* Electro-Capacitive
+	* 45g dome sheet
+	* 10g springs
+	* Shine-through keycaps
 
 ### Mouse
-* Logitech G302 Daedalus Prime
+* Corsair Glaive
 
 ### Printer
 * brother HL Series HL-2170W
-
