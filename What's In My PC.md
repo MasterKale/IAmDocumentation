@@ -1,40 +1,39 @@
-# What's In My PC (as of 10/2018)
+# What's In My PC (as of 11/2019)
 
 ## Custom Build
 
 ### CPU
-* Intel Core i5-4590 Haswell Quad-Core 3.3GHz
+* Intel Core i7-8700K Hexa-Core 3.7GHz
+* CORSAIR Hydro Series H100i v2 AIO Liquid CPU Cooler
 
 ### RAM
-* G.SKILL Ripjaws X Series 16GB (4 x 4GB) DDR3 2400 Model F3-2400C11D-8GXM
+* Corsair Vengeance LPX 16GB (2x8GB) DDR4 DRAM 3200MHz
 
 ### GPU
-* ZOTAC ZT-90101-10P GeForce GTX 970 4GB 256-Bit DDR5 PCI Express 3.0 x16
+* MSI GeForce GTX 1080 GAMING X 8GB
 
 ### Motherboard
-* MSI Z97-G55 SLI
+* MSI Z370M Gaming Pro AC
 
 ### PSU
 * SeaSonic X660 (SS-660KM) 660W
 
 ### Hard Drive(s)
-* SSD - Intel 320 Series SSDSA2CW080G3K5 2.5" 80GB SATA II MLC
-* HDD - Seagate Barracuda 1TB 7200RPM
-* SSD - Samsung EVO 850 500GB
+* NVMe - Samsung 970 EVO 250GB
+* NVMe - Samsung 970 EVO 1TB
 
 ### DVD Drive
-* LITE-ON 24X CD/DVD Burner Black SATA Model iHAS324-08
+* N/A
 
 ### Expansion Cards
 * N/A
 
 ### Case
-* Fractal Design Arc Midi R2
+* NZXT H400 Black/White
 
 ### Monitor
 * Samsung UE590 (4K, TN LCD, 60Hz, 28")
 * Dell U2515H (2K, IPS LCD, 60Hz, 25")
-* Asus VN247H-P (1080p, LCD, 60Hz, 24")
 
 ### Keyboard
 * NIZ PLUM 87 RGB (White)
