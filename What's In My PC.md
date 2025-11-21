@@ -1,4 +1,4 @@
-# What's In My PC (as of 11/2019)
+# What's In My PC (as of November 2025)
 
 ## Custom Build
 
