@@ -7,10 +7,10 @@
 * CORSAIR Hydro Series H100i v2 AIO Liquid CPU Cooler
 
 ### RAM
-* Corsair Vengeance LPX 16GB (2x8GB) DDR4 DRAM 3200MHz
+* Corsair Vengeance LPX 32GB (4x8GB) DDR4 DRAM 3200MHz
 
 ### GPU
-* MSI GeForce GTX 1080 GAMING X 8GB
+* Sapphire AMD Radeon RX 6700 XT GDDR6 12GB
 
 ### Motherboard
 * MSI Z370M Gaming Pro AC
@@ -32,18 +32,13 @@
 * NZXT H400 Black/White
 
 ### Monitor
-* Samsung UE590 (4K, TN LCD, 60Hz, 28")
-* Dell U2515H (2K, IPS LCD, 60Hz, 25")
+* Dell U3419W Ultrawide
 
 ### Keyboard
-* NIZ PLUM 87 RGB (White)
-	* Electro-Capacitive
-	* 45g dome sheet
-	* 10g springs
-	* Shine-through keycaps
+* Realforce R2TLA-US5-IV
 
 ### Mouse
-* Corsair Glaive
+* Keychron M5
 
 ### Printer
 * brother HL Series HL-2170W
